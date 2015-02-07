@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning JS</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style type="text/css">
+  
+  #circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: green;
+  }
+
+
+</style>
+
+ </head>
+
+ <body>
+ 
+ <button id="myButton">Click Me</button>
+ <div id="firstDiv">This is some text</div>
+ <button id="appendText">Appned</button>
+ <div id="secondDiv">JavaScript is...</div>
+
+ <button id="textCreator">Create list</button>
+ <div id="emptyDiv"></div>
+
+ <div id="circle"></div>
+
+<script type="text/javascript">
+  document.getElementById("myButton").onclick=function(){
+    //alert('Hi');
+    document.getElementById("firstDiv").innerHTML="Awesome";
+  }
+  document.getElementById("appendText").onclick = function(){
+
+    document.getElementById("secondDiv").innerHTML = document.getElementById("secondDiv").innerHTML + "great";
+  }
+  document.getElementById("textCreator").onclick=function(){
+    //alert('Hi');
+    document.getElementById("emptyDiv").innerHTML="<ul><li>Cat</li></ul>";
+  }
+  document.getElementById("circle").onclick = function(){
+    document.getElementById("circle").style.display = "none";
+  }
+
+    
+</script>
+
+ </body>
+</html>

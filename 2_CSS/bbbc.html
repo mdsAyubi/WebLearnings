@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning CSS</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ 
+ <style type="text/css">
+
+body{
+  margin: 0;
+  font-family: verdana,helvetica,arial,sans-serif;
+}
+
+
+#topbar{
+  background-color: #FFFFFF;
+  height: 46px;
+  width: 100%;
+  margin: 0;
+
+}
+.fixedwidth{
+  width: 1050px;
+  margin: 0 auto;
+  
+}
+#bbc-logo{
+  padding-right: 10px;
+  float: left;
+  border-right: 1px solid #990000;
+  height:46px;
+}
+
+#bbc-logo img{
+  margin: 10px 10px 0 10px;
+}
+
+.logodiv{
+  padding-top: 5px;
+  float: left;
+  border-right: 1px solid #990000;
+  padding-right: 10px;
+
+}
+#signindiv{
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 6px 40px 2px 20px;
+  float: left;
+  border-right: 1px solid #990000;
+  position: relative;
+
+}
+
+#signindiv img{
+  position: relative;
+  top: 3px;
+  float: left;
+
+}
+#topmenudiv{
+  position: relative;
+  float: left;
+
+
+}
+#topmenudiv li{
+  float: left;
+  list-style: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  border-left: 1px solid #990000;
+  height: 100%;
+  padding: 10px 20px 12px 20px;
+  
+
+
+}
+
+#topmenudiv ul{
+  float: left;
+  margin: 0
+  padding: 0;
+  
+  
+}
+#searchdiv{
+  float: left;
+  padding: 5px 0 0 10px;
+}
+#searchdiv input{
+  height: 25px;
+  border:transparent;
+  padding: 3px;
+  font-size: 20px;
+  background-image: url("images/magnify.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+
+ </style>
+
+
+ </head>
+
+ <body>
+
+
+ <div id="container" >
+
+    <div id="topbar">
+
+      <div class="fixedwidth">
+
+          <div id="logodiv">
+              <img  id="bbc-logo"  src="images/bbclogo.png" />
+          </div>
+          <div id="signindiv">
+            <img src="images/signin.png"  height="40px" /> Sign In
+          </div>
+          <div id="topmenudiv">
+            <ul>
+              <li>News</li>
+              <li>Sport</li>
+              <li>Weather</li>
+              <li>Earth</li>
+              <li>Future</li>
+              <li>Shop</li>
+              <li>TV</li>
+              <li>Radio</li>
+              <li>More</li>
+            </ul>
+          </div>
+          <div id="searchdiv">
+          <input type="text" placeholder="Search" />
+            
+          </div>
+      </div>
+    </div>
+ </div>
+ 
+
+
+ </body>
+</html>

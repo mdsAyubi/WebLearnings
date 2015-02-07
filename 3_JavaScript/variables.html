@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning JS</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style type="text/css">
+ 
+</style>
+
+ </head>
+
+ <body>
+ 
+ <input id="myInput" type="text" value="test" />
+ <button id="myButton">Change Text</button>
+ <div id="firstDiv">This is some text</div>
+ 
+
+<script type="text/javascript">
+  
+//var newText = document.getElementById("myInput").value;
+var myArray = new Array();
+
+myArray[0] = "pizza";
+myArray[1] = "chocolate";
+//console.log(myArray);
+
+myOtherArray = ["rain", "sunshine"];
+console.log(myOtherArray);
+
+myOtherArray.push("snow");
+console.log(myOtherArray);
+
+myOtherArray.splice(1,1);
+console.log(myOtherArray);
+
+myOtherArray.splice(1,0,"hail");
+console.log(myOtherArray);
+
+
+  document.getElementById("myButton").onclick = function(){
+    //newText = document.getElementById("myInput").value;
+    //document.getElementById("firstDiv").innerHTML = newText;
+    document.getElementById("firstDiv").innerHTML = myArray[0];
+  }
+
+    
+</script>
+
+ </body>
+</html>

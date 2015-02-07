@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning JQuery</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<style type="text/css">
+	
+#circle{
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	border-radius: 100px;
+}
+
+.square{
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	margin-top: 10px;
+}
+
+</style>
+
+ </head>
+
+ <body>
+ <div id="circle"></div>
+ <p>THis is some text</p>
+
+<iframe src="http://www.cnn.com"></iframe>
+
+ <div class="square"></div>
+ <div class="square"></div>
+
+
+
+ <script type="text/javascript">
+
+$("#circle").click(function(){
+
+//alert("Circle clicked");
+$("p").html("this is some text after change");
+
+});
+
+
+$("#circle").hover(function(){
+
+//alert("Circle clicked");
+$("p").html("this is some text after change");
+
+});
+
+$(".square").click(function(){
+
+alert("square clicked");
+
+});
+
+$("#cicle").click(function(){
+
+	$("iframe").attr("src","http://www.bbc.com");
+})
+
+ </script>
+
+
+
+
+
+ </body>
+</html>

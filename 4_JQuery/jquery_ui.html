@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+ <head>
+ <title>Learning JQuery-UI</title>
+
+ <meta charset="utf-8" />
+ <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+<style type="text/css">
+	
+#circle{
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	border-radius: 100px;
+}
+
+#draggable{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	margin-top: 10px;
+}
+
+#resize{
+	width: 200px;
+	height: 100px;
+	background-color: green;
+	margin-top: 10px;
+}
+
+
+
+</style>
+
+ </head>
+
+ <body>
+
+ <div id="draggable">
+ 	Drag me ...!
+ </div>
+
+ <div id="resize">
+ 	Resize Me!!
+ </div>
+
+
+
+
+
+ <script type="text/javascript">
+
+ 	$("#draggable").draggable();
+ 	$("#resize").resizable();
+
+ </script>
+
+
+
+
+
+ </body>
+</html>
