@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>Welcome to Bookart</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+
+	<script type="text/javascript" src="./app.js"></script>
+</head>
+<body>
+	<div id="header-wrapper" ng-controller="HeaderCtrl">
+		<span class="logo pull-left">{{appDetails.title}}}</span>
+		<span class="tagline pull-left">{{appDetails.tagline}}</span>
+
+		<div class="nav-wrapper pull-left">
+			<ul class="nav nav-pills">
+				<li class="active"><a href="#/books">Books</a></li>
+				<li><a href="#/kart">Kart</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div ng-view>
+		
+	</div>
+
+
+</body>
+</html>

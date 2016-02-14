@@ -1,0 +1,168 @@
+====Node JS Notes====
+
+***Hello World
+-console.log("Hello World");
+-Everything has a return value
+-.help for help
+-.break to discard everything
+-Ctrl D to exit
+
+***Writing first web server
+-var http=require('http');
+var s = http.createServer(function(req,res){
+	console.log("Got a request!!!");
+	res.end("Hey, thanks for calling!");
+});
+s.listen(8080);
+
+***Use Node debugger
+-res.writeHead must be before res.end
+-res.end is mandatory
+
+
+***Up to date info and help
+-Nodejs.org Docs
+-Node js google group
+-SO tagged nodejs
+-node.js on Twitter @nodejs
+
+*** Debugger
+node debug web_server.js
+-help --gets help
+-list(5) --list next X lines
+-setBreakpoint(5) or sb
+-next
+-we can start repl also
+
+
+***Basic Types
+-null and undefined
+-object
+-typeof x //to get the type of object
+-number //large double precison numbers 2^53
+-function
+-string
+-be careful with comparison between floating numbers
+-integer division produces floating numbers
+-Math.floor or Math.ceil
+-Infinity for division by 0 , also -Infinity
+-parseInt and parseFloat for string to numbers comparision, NaN for unpareseable strings
+-isNaN() toc check
+-isFinitte
+-true / false as boolean
+-Boolean function to convert
+-false 0 "" NaN null undefined ===>FALSE
+
+
+***Strings
+-Sequence of characters
+-UCS-2
+-No character data type
+-Wrapped in double and single quotes
+-x.length property for length
+-concatenate using +
+-left to right associativity  for +
+-indexOf for index of a string , -1 for for not found
+-substr(startingIndex,length)
+-slice(startingIndex, endingIndex)
+-split(separator)
+-trim() remmove spaces from beginning and end
+-regular expression like : /[aA]{2,}/ or new RegExp(expression)
+-"aaa00".search(regex)
+-replace(regexp,regexp)
+
+
+***Objects
+-Declare like var o1=new Object() or var o2={}
+-var user = {fname:"mark"}
+-JSON, like literal notation for objects , just quote the property names
+-delete for deleting the properties
+-can be used as associative arrays
+-Object.keys(user) will return the array of keys which can be used to check the length
+
+
+***Arrays
+-var arr1 = new Array() or var arr2 = [];
+-has a length property
+-typeof arr2 returns object
+-Array.isArray() tells if it's an array
+-adding can be done like arr[arr.length]=new value
+-push to add to the end of the array
+-indexed can be arbitrary , the missing places will be filled by undefined
+-delete arr[i] will set the value at i wit undefined
+-splice(startingIndex,numberOfItems) it will take those mentioned elements out and return them, also changes the original array, used for deleting items
+-pop() removes the top element
+-unshift() adds the element to the beginning of the array
+-shift() removes the element from the beginning of the array
+-join() to create string out of arrays
+-sort() to sort the array
+-names.forEach(function(value){
+	console.log(value);
+});
+-names.sort(function(a,b){
+	a=a.toLowerCase();
+	b=b.toLowerCase();
+	if(a<b) return -1;
+	if(a>b) return 1;
+	return 0;
+});
+
+
+***Functions
+-Any number of arguments can be passed, even if function takes only an specified number
+-No argument validation takes place
+-special variable arguments is available in every function which has the info about all the arguments
+-functions dont need to have a name
+-fucntion inherits the scope of the parent
+-variables in functions have local scope
+
+***Language Constructs
+- == and ===
+- '' ==false == null == undefined == 0 =>true
+- null === undefined =>false
+- usual ternary operator
+- for while loops
+- switch statement with string cases
+- & | ^ ! as bitwise operators
+- for var x in someObject to iterate over keys
+
+
+***Classes inheritance
+
+***Error Handling
+-throw new Error("Bad!!!");
+- try ...catch(e) to handle
+
+
+***Global for Node.js
+- global
+- process
+
+***Asynchronous Programming
+-There is only one process running at a time which pushes events on the Event stack/listeners. Once the notification from the underlying mechanism is received, the functions in the event stack is popped and executed, which in turn can put something else on the stack.
+
+***Errors in aycn world
+-Always check for errors in callback functions instead of writing try catch
+
+
+***Yielding control
+ - Consider two async functions, one of which is taking all the available memory, the other cant finish. To remedy this, we use
+ 	process.nextTick(callback)
+ 	setImmediate(callback);
+
+
+***Looping and Async programming
+What happens when you call asycn version of an API like fstat in a loop, the functions are pushed intot the node event queue and whatever you wanted to do after the loop is executed. If you are pushing some intermittent result and doing some calculations, they won't be available after the execution of the loop. Therefore, the way to go with loops and async programming is recusrsive iterator patters. Look at json_server.js
+
+***Modules
+-Every js file is a module- module global varible
+-You can export your function by adding them in the exports global variable
+-Most of the times, we export using the factory pattern
+-Exporting just the constructor function is also possible
+-When we write require for a module, node searches all the paths in module variable
+-Module dependencies are put separately for every project
+-
+
+
+
+

@@ -1,0 +1,77 @@
+
+
+===Java Script Notes===
+
+Lexical Environment--Where you write the code
+Execution Context -- A wrapper to help manage the code that is running
+
+Objects are collection of name value pairs
+
+Address:{
+	Street:'Main',
+	Apartment :{
+		Floor:3,
+		Number:301
+	}
+}
+
+Global Environment and Global Execution Context
+1. Creates global object and "this", in case of browser this means window
+2. Outer Environment
+3. Your code
+
+Global--Not inside a function
+
+
+Hoisting: Exec context is created in two phases
+1st: Setup memory space for vars and funcs
+
+All vars are setup as undefined.
+not defined and undefined are not the same.
+
+Never set vars to undefined. Let it always mean set by browser created during creation time.
+
+2nd: Execution phase: Runs your code.
+
+Single Threaded -One command at a time.
+Synchronous : And in order
+
+Invocation: Calling a function
+Every function call creates its own execution context
+
+Scope: Each variable in its own context
+Scope Chaining: Checks the outer environment if the var/fucntion is not found in the current scope.
+
+let keyword has block scope
+
+Asynchronous: More than one at a time.
+
+Event Queue: Queue of events. Which runs when the execution eontext stack is empty.
+
+--------------------
+
+Dynamic Typing: Dont tell the type of variable
+Primitive types: undefined,null,boolean,number,string,symbol(ES6)
+Operators are functions
+
+Type coercion: Trying to convert type
+Default Values:
+
+function (name){
+	var name = name||<Your name>
+}
+
+Objects and Functions:
+
+Object can contain..primitive, objects and functions called methods
+
+var person = new Object();
+person["firstname"] = "Viky";
+[] --> computed member access property
+person.firstname
+
+Object Literals:
+var person = {};
+var perosn = {firstname:'Tony',lastname:'Alicea'};
+
+
