@@ -169,6 +169,33 @@ async.auto
 async.auto
 async.whilst
 
+****Express
+-Usually written as app.<method>(<regrex>,[optional function],<handler function>);
+-Can write parameterized queries for urls
+-get,post,all,delete,put
+-matching is done from top to bottom
+
+
+***API Design
+-CRUD Design 
+Create PUT
+Retrieve GET
+Update POST
+Delete DELETE
+
+-URl should be collection or an item in collection
+-Collection should always be nouns like users,albums, invoices etc.
+-To fetch or update an object, specify the object in the collection
+-You destroy objects with DELETE
+-If you have collection of collection, continue the pattern
+-Slight changes such as pagination or filtering, use query params
+-REST apis should be versioned
+-Include data format in URL, allows for different formats in future
+ check blinksale.com/api
+
+***
+
+
 
 
 
