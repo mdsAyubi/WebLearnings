@@ -161,7 +161,15 @@ What happens when you call asycn version of an API like fstat in a loop, the fun
 -Exporting just the constructor function is also possible
 -When we write require for a module, node searches all the paths in module variable
 -Module dependencies are put separately for every project
--
+
+***Async Module
+async.waterfall
+async.parallel
+async.auto
+async.auto
+async.whilst
+
+
 
 
 
