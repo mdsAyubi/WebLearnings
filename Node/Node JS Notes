@@ -193,11 +193,111 @@ Delete DELETE
 -Include data format in URL, allows for different formats in future
  check blinksale.com/api
 
-***
+***Connect
+-senchalabs.org
+-expressjs.com
+-app.use(<component>)
+-app.use(express.responseTime())
+-Kind of like filters in J2EE
+-middlewares are ordered
+-generic ones should be below in ordering
+
+***Serving static content
+-app.use(express.static(__dirname));
+-bodyParser
+-cookieParser
+-session
+-basicAuth
+
+***Mongo DB Notes
+-mongodb npm module
+-databases => databases
+-tables =>collections
+-records => documents
+
+-rm -rf data/* && ./mongodb --dbpath=./data
+
+-Unique Id in collection, always provided. Choose your own wisely.
+-db.collections to create tables/collection
+-db.createCollection
+-albums.insert --to insert a record into a collection
+-db.close 
+-errocode for different errors like 11000 for duplicate
+-albums.insert
+-albums.remove({_id:<some_id>})
+
+-albumns.update({_id:<some_id>},
+				{$set : {description:'this is new description...'}},
+				{safe:true},
+				cb
+				);
+-In case of update
+	--set
+	--inc
+	--rename
+	--push
+	--pushAll
+	--pop
+	--pull
+
+***Find method in Mongo
+-find() --sets up a curser based on search param. Doesnot do anything
+
+-With sync model, calls a call back function, e.g
+
+albums.find().toArray(cb)
+
+function(found_results,cb){
+	console.log(found_results);
+}
+
+OR
+
+albums.find().each(function(err,item){ --calls this function for all items
+	if(item == null){ --calls one more time with item = null
+		cb(null);
+		return;
+	}else{
+		console.log('got an item')
+	}
+});
+
+
+OR
+
+var s = albumns.find().stream();
+s.on("data", function(item){ --or readable event
+	console.log('Got an item'+item.name);
+});
+
+s.on('end', function(){
+	cb(null)
+});
+
+
+-for find function
+	--$and
+	--$or
+	--$ne
+	--$lt
+	--$lte
+	--$gt
+	--$gte
+	--$in
+	--$nin
+	--$all
+-sort({date:-1})
+-skip(<num>)
+-limit(<num>)
+
+***Memcached
+-connect-memcached
+
+***Virtual Hosts
+-vhost connect module
 
 
 
 
-
-
+ 
 
